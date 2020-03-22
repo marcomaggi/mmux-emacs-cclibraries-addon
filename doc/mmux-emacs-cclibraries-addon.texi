@@ -151,6 +151,8 @@ the @file{.emacs} file:
    "mmux-emacs-cclibraries-addon"
    "Editing additions for MMUX Emacs packages: CCLibraries support."
    t)
+
+(add-hook 'c-mode-hook 'mmux-emacs-cclibraries-addon)
 @end example
 
 @c page
