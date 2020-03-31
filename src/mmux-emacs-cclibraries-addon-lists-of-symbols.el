@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-03-22 06:33:02 marco>
+;; Time-stamp: <2020-03-31 08:40:02 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -34,7 +34,8 @@
 ;;;; list of identifiers: preprocessor symbols
 
 (defconst mmux-emacs-cclibraries-addon-c-language-cdecls-directives-list
-  '("cce_decl"
+  '("cclib_decl"
+    "cce_decl"
     "ccdoubles_decl"
     "ccevents_decl"
     "ccmem_decl"
@@ -48,8 +49,10 @@
     "ccsys_decl"
     "cctests_decl"))
 
-(defconst mmux-emacs-cclibraries-addon-c-language-pointer-casts-directives-list
-  '("CCE_PC"
+(defconst mmux-emacs-cclibraries-addon-c-language-cast-directives-list
+  '("CCLIB_PC"
+    "CCLIB_CAST"
+    "CCE_PC"
     "CCDOUBLES_PC"
     "CCEVENTS_PC"
     "CCMEM_PC"
@@ -62,6 +65,21 @@
     "CCSTRUCTS_PC"
     "CCSYS_PC"
     "CCTESTS_PC"))
+
+(defconst mmux-emacs-cclibraries-addon-c-language-attributes-directives-list
+  '("CCLIB_FUNC_ATTRIBUTE_ALWAYS_INLINE"
+    "CCLIB_FUNC_ATTRIBUTE_CONST"
+    "CCLIB_FUNC_ATTRIBUTE_DLLEXPORT"
+    "CCLIB_FUNC_ATTRIBUTE_DLLIMPORT"
+    "CCLIB_FUNC_ATTRIBUTE_FORMAT"
+    "CCLIB_FUNC_ATTRIBUTE_LEAF"
+    "CCLIB_FUNC_ATTRIBUTE_NONNULL"
+    "CCLIB_FUNC_ATTRIBUTE_NORETURN"
+    "CCLIB_FUNC_ATTRIBUTE_PURE"
+    "CCLIB_FUNC_ATTRIBUTE_RETURNS_NONNULL"
+    "CCLIB_FUNC_ATTRIBUTE_UNUSED"
+    "CCLIB_FUNC_ATTRIBUTE_USED"
+    "CCLIB_FUNC_ATTRIBUTE_VISIBILITY"))
 
 
 ;;;; CCMode font locking: CCExceptions stuff

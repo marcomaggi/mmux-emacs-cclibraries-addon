@@ -224,7 +224,8 @@
 	     mmux-emacs-cclibraries-addon-c-language-ccstructs-directives-list
 	     mmux-emacs-cclibraries-addon-c-language-cctests-directives-list
 	     mmux-emacs-cclibraries-addon-c-language-cdecls-directives-list
-	     mmux-emacs-cclibraries-addon-c-language-pointer-casts-directives-list)
+	     mmux-emacs-cclibraries-addon-c-language-cast-directives-list
+	     mmux-emacs-cclibraries-addon-c-language-attributes-directives-list)
      'symbols))
   "List of known C language directive names that will be highlighted with `font-lock-keyword-face'.")
 
