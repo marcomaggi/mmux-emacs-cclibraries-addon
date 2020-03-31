@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-03-31 08:40:02 marco>
+;; Time-stamp: <2020-03-31 16:14:54 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -72,6 +72,7 @@
     "CCLIB_FUNC_ATTRIBUTE_DLLEXPORT"
     "CCLIB_FUNC_ATTRIBUTE_DLLIMPORT"
     "CCLIB_FUNC_ATTRIBUTE_FORMAT"
+    "CCLIB_FUNC_ATTRIBUTE_HOT"
     "CCLIB_FUNC_ATTRIBUTE_LEAF"
     "CCLIB_FUNC_ATTRIBUTE_NONNULL"
     "CCLIB_FUNC_ATTRIBUTE_NORETURN"
