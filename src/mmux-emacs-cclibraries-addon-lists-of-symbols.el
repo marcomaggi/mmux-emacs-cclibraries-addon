@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-02 11:24:37 marco>
+;; Time-stamp: <2020-04-02 11:56:55 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -35,36 +35,11 @@
 
 (defconst mmux-emacs-cclibraries-addon-c-language-cdecls-directives-list
   '("cclib_decl"
-    "cce_decl"
-    "ccdoubles_decl"
-    "ccevents_decl"
-    "ccmem_decl"
-    "ccpairs_decl"
-    "ccpic_decl"
-    "ccptn_decl"
-    "ccsemver_decl"
-    "ccstr_decl"
-    "ccstrings_decl"
-    "ccstructs_decl"
-    "ccsys_decl"
-    "cctests_decl"))
+    "cclib_private_decl"))
 
 (defconst mmux-emacs-cclibraries-addon-c-language-cast-directives-list
   '("CCLIB_PC"
-    "CCLIB_CAST"
-    "CCE_PC"
-    "CCDOUBLES_PC"
-    "CCEVENTS_PC"
-    "CCMEM_PC"
-    "CCPAIRS_PC"
-    "CCPIC_PC"
-    "CCPTN_PC"
-    "CCSEMVER_PC"
-    "CCSTR_PC"
-    "CCSTRINGS_PC"
-    "CCSTRUCTS_PC"
-    "CCSYS_PC"
-    "CCTESTS_PC"))
+    "CCLIB_CAST"))
 
 (defconst mmux-emacs-cclibraries-addon-c-language-attributes-directives-list
   '("CCLIB_FUNC_ATTRIBUTE_ALWAYS_INLINE"
