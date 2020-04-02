@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-03-31 16:14:54 marco>
+;; Time-stamp: <2020-04-02 11:24:37 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -80,7 +80,8 @@
     "CCLIB_FUNC_ATTRIBUTE_RETURNS_NONNULL"
     "CCLIB_FUNC_ATTRIBUTE_UNUSED"
     "CCLIB_FUNC_ATTRIBUTE_USED"
-    "CCLIB_FUNC_ATTRIBUTE_VISIBILITY"))
+    "CCLIB_FUNC_ATTRIBUTE_VISIBILITY"
+    "CCLIB_UNUSED"))
 
 
 ;;;; CCMode font locking: CCExceptions stuff
