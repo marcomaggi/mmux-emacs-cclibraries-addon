@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-02 20:40:58 marco>
+;; Time-stamp: <2020-04-05 09:47:33 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -482,7 +482,28 @@
     "ccstructs_pathname_is_realpath"))
 
 (defconst mmux-emacs-cclibraries-addon-c-language-ccnames-macros-list
-  '("ccname_alloc"
+  '(
+    "cclib_alloc"
+    "cclib_delete"
+    "cclib_final"
+    "cclib_trait_method"
+    "cclib_trait_method_type"
+    "cclib_trait_new"
+    "cclib_trait_new_type"
+    "cclib_trait_table"
+    "cclib_trait_table_type"
+    "cclib_init"
+    "cclib_is"
+    "cclib_make"
+    "cclib_method"
+    "cclib_method_type"
+    "cclib_new"
+    "cclib_release"
+    "cclib_table"
+    "cclib_table_type"
+    "cclib_type"
+    ;;
+    "ccname_alloc"
     "ccname_delete"
     "ccname_final"
     "ccname_trait_method"
@@ -499,7 +520,8 @@
     "ccname_release"
     "ccname_table"
     "ccname_table_type"
-    "ccname_type"))
+    "ccname_type"
+    ))
 
 
 ;;;; CCMode font locking: CCStrings stuff

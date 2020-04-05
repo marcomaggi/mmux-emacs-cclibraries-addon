@@ -266,6 +266,55 @@
     ;;fontification with this specification.
     (,mmux-emacs-cclibraries-addon-c-language-ccnames-macros-rex 1 font-lock-keyword-face t)
 
+    ;; --------------------------------------------------------------------
+
+    ;;In macro uses like:
+    ;;
+    ;;  cclib_init(ccptn_t, clean)
+    ;;  cclib_init(ccptn_t, error)
+    ;;  cclib_init(ccptn_t, pointer, clean)
+    ;;  cclib_init(ccptn_t, pointer, error)
+    ;;  cclib_init(ccptn_t, pointer, dup, clean)
+    ;;  cclib_init(ccptn_t, pointer, dup, error)
+    ;;
+    ;;we want to highlight "clean" and "error" and "copy".
+    ;;
+    (,(concat "cclib_\\(init\\|final\\|new\\|delete\\|alloc\\|release\\|make\\)\\("
+	      "([^,]+,[[:blank:]\n]*\\(clean\\|error\\|copy\\))"
+	      "\\|"
+	      "([^,]+,[^,]+,[[:blank:]\n]*\\(clean\\|error\\|copy\\))"
+	      "\\|"
+	      "([^,]+,[^,]+,[^,]+,[[:blank:]\n]*\\(clean\\|error\\|copy\\))"
+	      "\\)")
+     3 font-lock-keyword-face t)
+
+    ;;In macro uses like:
+    ;;
+    ;;  cclib_type(cce_condition_t, root)
+    ;;
+    ;;we want to highlight "root" with the type face.
+    ;;
+    ("cclib_type([^,]+,[[:blank:]\n]*\\([^)]+\\))" 1 font-lock-type-face t)
+
+    ;;In macro uses like:
+    ;;
+    ;;  cclib_is(cce_condition_t, root)
+    ;;
+    ;;we want to highlight "root" with the type face.
+    ;;
+    ("cclib_is([^,)]+,[[:blank:]\n]*\\([^)]+\\))" 1 font-lock-type-face t)
+
+    ;;In macro uses like:
+    ;;
+    ;;  cclib_method_type(cce_condition_t, delete)
+    ;;
+    ;;we want to highlight "delete" with the type face.
+    ;;
+    ("cclib_method_type([^,]+,[[:blank:]\n]*\\([^)]+\\))" 1 font-lock-type-face t)
+
+    ;; --------------------------------------------------------------------
+    ;; These are the old ones using "ccname" as preix.
+
     ;;In macro uses like:
     ;;
     ;;  ccname_init(ccptn_t, clean)
