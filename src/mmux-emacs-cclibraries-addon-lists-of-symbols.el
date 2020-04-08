@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-05 09:47:33 marco>
+;; Time-stamp: <2020-04-08 06:30:41 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -502,6 +502,7 @@
     "cclib_table"
     "cclib_table_type"
     "cclib_type"
+    "cclib_call"
     ;;
     "ccname_alloc"
     "ccname_delete"
