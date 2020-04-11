@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-08 06:30:41 marco>
+;; Time-stamp: <2020-04-11 16:36:11 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -483,45 +483,35 @@
 
 (defconst mmux-emacs-cclibraries-addon-c-language-ccnames-macros-list
   '(
-    "cclib_alloc"
-    "cclib_delete"
-    "cclib_final"
-    "cclib_trait_method"
-    "cclib_trait_method_type"
-    "cclib_trait_new"
-    "cclib_trait_new_type"
-    "cclib_trait_table"
-    "cclib_trait_table_type"
     "cclib_init"
-    "cclib_is"
-    "cclib_make"
-    "cclib_method"
-    "cclib_method_type"
-    "cclib_new"
+    "cclib_final"
+    "cclib_alloc"
     "cclib_release"
-    "cclib_table"
-    "cclib_table_type"
-    "cclib_type"
-    "cclib_call"
+    "cclib_new"
+    "cclib_delete"
+    "cclib_make"
     ;;
-    "ccname_alloc"
-    "ccname_delete"
-    "ccname_final"
-    "ccname_trait_method"
-    "ccname_trait_method_type"
-    "ccname_trait_new"
-    "ccname_trait_new_type"
-    "ccname_trait_table"
-    "ccname_trait_table_type"
-    "ccname_init"
-    "ccname_is"
-    "ccname_method"
-    "ccname_method_type"
-    "ccname_new"
-    "ccname_release"
-    "ccname_table"
-    "ccname_table_type"
-    "ccname_type"
+    "CCLIB_DEFINE_STRUCT_WITH_DESCRIPTOR"
+    "CCLIB_DEFINE_TRAIT"
+    "CCLIB_DEFINE_TRAIT_STRUCTURE"
+    "CCLIB_DEFINE_TRAIT_MAKER"
+    ;;
+    "cclib_struct_descriptor_type"
+    "cclib_struct_descriptor"
+    "cclib_methods_table_type"
+    "cclib_methods_table"
+    "cclib_method_type"
+    "cclib_method"
+    "cclib_struct_descriptor_ref_methods_table_pointer"
+    "cclib_struct_descriptor_set_methods_table_pointer"
+    "cclib_method_pointer"
+    "cclib_call"
+    "cclib_vcall"
+    ;;
+    "cclib_trait_resource_pointer"
+    ;;
+    "cclib_fun"
+    "cclib_is"
     ))
 
 
