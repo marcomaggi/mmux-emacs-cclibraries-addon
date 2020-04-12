@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-12 06:16:49 marco>
+;; Time-stamp: <2020-04-12 06:55:44 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -31,7 +31,7 @@
 ;;; Code:
 
 
-;;;; list of identifiers: preprocessor symbols
+;;;; CCMode font locking: CCLibraries stuff
 
 (defconst cclibraries-c-language-cdecls-directives-list
   '("cclib_decl"
@@ -58,6 +58,40 @@
     "CCLIB_FUNC_ATTRIBUTE_USED"
     "CCLIB_FUNC_ATTRIBUTE_VISIBILITY"
     "CCLIB_UNUSED"))
+
+(defconst cclibraries-c-language-ccnames-macros-list
+  '(
+    "cclib_init"
+    "cclib_final"
+    "cclib_alloc"
+    "cclib_release"
+    "cclib_new"
+    "cclib_delete"
+    "cclib_make"
+    "cclib_unmake"
+    ;;
+    "CCLIB_DEFINE_STRUCT_WITH_DESCRIPTOR"
+    "CCLIB_DEFINE_TRAIT"
+    "CCLIB_DEFINE_TRAIT_STRUCTURE"
+    "CCLIB_DEFINE_TRAIT_MAKER"
+    ;;
+    "cclib_struct_descriptor_type"
+    "cclib_struct_descriptor"
+    "cclib_methods_table_type"
+    "cclib_methods_table"
+    "cclib_method_type"
+    "cclib_method"
+    "cclib_struct_descriptor_ref_methods_table_pointer"
+    "cclib_struct_descriptor_set_methods_table_pointer"
+    "cclib_method_pointer"
+    "cclib_call"
+    "cclib_vcall"
+    ;;
+    "cclib_trait_resource_pointer"
+    ;;
+    "cclib_fun"
+    "cclib_is"
+    ))
 
 
 ;;;; CCMode font locking: CCExceptions stuff
@@ -480,40 +514,6 @@
     "ccstructs_pathname_is_relative"
     "ccstructs_pathname_is_normalised"
     "ccstructs_pathname_is_realpath"))
-
-(defconst cclibraries-c-language-ccnames-macros-list
-  '(
-    "cclib_init"
-    "cclib_final"
-    "cclib_alloc"
-    "cclib_release"
-    "cclib_new"
-    "cclib_delete"
-    "cclib_make"
-    "cclib_unmake"
-    ;;
-    "CCLIB_DEFINE_STRUCT_WITH_DESCRIPTOR"
-    "CCLIB_DEFINE_TRAIT"
-    "CCLIB_DEFINE_TRAIT_STRUCTURE"
-    "CCLIB_DEFINE_TRAIT_MAKER"
-    ;;
-    "cclib_struct_descriptor_type"
-    "cclib_struct_descriptor"
-    "cclib_methods_table_type"
-    "cclib_methods_table"
-    "cclib_method_type"
-    "cclib_method"
-    "cclib_struct_descriptor_ref_methods_table_pointer"
-    "cclib_struct_descriptor_set_methods_table_pointer"
-    "cclib_method_pointer"
-    "cclib_call"
-    "cclib_vcall"
-    ;;
-    "cclib_trait_resource_pointer"
-    ;;
-    "cclib_fun"
-    "cclib_is"
-    ))
 
 
 ;;;; CCMode font locking: CCStrings stuff
