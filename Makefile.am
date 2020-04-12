@@ -11,8 +11,8 @@ MAINTAINERCLEANFILES	=
 ## documentation
 
 AM_MAKEINFOFLAGS		= --no-split
-info_TEXINFOS			= doc/mmux-emacs-cclibraries-addon.texi
-doc_mmux_emacs_cclibraries_addon_TEXINFOS	= \
+info_TEXINFOS			= doc/cclibraries-addon.texi
+doc_cclibraries_addon_TEXINFOS	= \
 	doc/fdl-1.3.texi	\
 	doc/gpl-3.0.texi	\
 	doc/macros.texi
@@ -31,12 +31,12 @@ AM_ELCFLAGS	= --no-init-file $(MY_EMACS_DIRS)
 
 sharelispdir		= $(datadir)/emacs/site-lisp
 dist_sharelisp_LISP	= \
-	src/mmux-emacs-cclibraries-addon.el			\
-	src/mmux-emacs-cclibraries-addon-font-lock.el		\
-	src/mmux-emacs-cclibraries-addon-lists-of-symbols.el
+	src/cclibraries-addon.el			\
+	src/cclibraries-addon-font-lock.el		\
+	src/cclibraries-addon-lists-of-symbols.el
 
-src/mmux-emacs-cclibraries-addon-font-lock.elc: src/mmux-emacs-cclibraries-addon-lists-of-symbols.el
+src/cclibraries-addon-font-lock.elc: src/cclibraries-addon-lists-of-symbols.el
 
-src/mmux-emacs-cclibraries-addon.elc: src/mmux-emacs-cclibraries-addon-font-lock.elc
+src/cclibraries-addon.elc: src/cclibraries-addon-font-lock.elc
 
 ### end of file

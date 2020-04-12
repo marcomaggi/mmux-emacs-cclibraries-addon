@@ -1,10 +1,10 @@
-;;; mmux-emacs-cclibraries-addon.el --- editing additions for C language mode
+;;; cclibraries-addon.el --- editing additions for C language mode
 
 ;; Copyright (C) 2020 Marco Maggi
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020
-;; Time-stamp: <2020-03-22 07:18:30 marco>
+;; Time-stamp: <2020-04-12 06:17:10 marco>
 ;; Keywords: languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -31,12 +31,12 @@
 
 ;;; Code:
 
-(require 'mmux-emacs-cclibraries-addon-font-lock)
+(require 'cclibraries-addon-font-lock)
 
 
 ;;;; Templates insertion
 
-(defun mmux-emacs-cclibraries-addon-c-language-insert-cce-condition (PREFIX NAME STATIC_DESCRIPTION)
+(defun cclibraries-c-language-insert-cce-condition (PREFIX NAME STATIC_DESCRIPTION)
   "Insert the template of a CCExceptions definition.
 
 Argument PREFIX a string representing the prefix of this API.
@@ -109,11 +109,11 @@ const char *
 
 ;;;; imenu customisation
 
-;; (defconst mmux-emacs-cclibraries-addon-imenu-generic-expression
+;; (defconst cclibraries-imenu-generic-expression
 ;;   `(
 ;; ;;; functions, generic functions, methods, variables
 
-;;     ;; (mmux-emacs-cclibraries-addon-defmethod ?fun (?args) . ?body)
+;;     ;; (cclibraries-defmethod ?fun (?args) . ?body)
 ;;     ;; (mmux-defun ?fun (?args) . ?body)
 ;;     (nil
 ;;      ,(eval-when-compile
@@ -122,28 +122,28 @@ const char *
 ;; 			      "mmec-defun"
 ;; 			      "mmec-defmacro")
 ;; 			    'symbols)
-;; 		"\\(" mmux-emacs-cclibraries-addon-identifiers-rex "\\)"))
+;; 		"\\(" cclibraries-identifiers-rex "\\)"))
 ;;      2)
 ;;     )
 ;;   "Customise imenu for Emacs Lisp editing using MMUX Emacs packages.
 
 ;; For details on how to use it see `imenu-generic-expression'.")
 
-;; (defun mmux-emacs-cclibraries-addon-setup-imenu ()
+;; (defun cclibraries-setup-imenu ()
 ;;   "Setup imenu for MMEC mode."
 ;;   (interactive)
 ;;   (setq imenu-generic-expression (append imenu-generic-expression
-;; 					 mmux-emacs-cclibraries-addon-imenu-generic-expression)))
+;; 					 cclibraries-imenu-generic-expression)))
 
 
 ;;;; done
 
 ;;;###autoload
-(defun mmux-emacs-cclibraries-addon ()
+(defun cclibraries-addon ()
   "Setup editing addons for CCMode related to the CCLibraries packages."
-  ;;(mmux-emacs-cclibraries-addon-setup-imenu)
-  ;;(mmux-emacs-cclibraries-addon-setup-indentation)
+  ;;(cclibraries-setup-imenu)
+  ;;(cclibraries-setup-indentation)
   (message "Setting up support for CCLibraries in CCMode."))
 
-(provide 'mmux-emacs-cclibraries-addon)
+(provide 'cclibraries-addon)
 ;;; mmec.el ends here

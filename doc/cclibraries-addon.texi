@@ -1,6 +1,6 @@
 \input texinfo.tex
 @c %**start of header
-@setfilename mmux-emacs-cclibraries-addon.info
+@setfilename cclibraries-addon.info
 @settitle Editing add-on for C mode under @acronym{GNU} Emacs: CCLibraries support
 @c %**end of header
 
@@ -147,12 +147,12 @@ After installation of the package, it is possible to load the main module by add
 the @file{.emacs} file:
 
 @example
-(autoload 'mmux-emacs-cclibraries-addon
-   "mmux-emacs-cclibraries-addon"
-   "Editing additions for MMUX Emacs packages: CCLibraries support."
+(autoload 'cclibraries-addon
+   "cclibraries-addon"
+   "Editing additions for C language mode: CCLibraries support."
    t)
 
-(add-hook 'c-mode-hook 'mmux-emacs-cclibraries-addon)
+(add-hook 'c-mode-hook 'cclibraries-addon)
 @end example
 
 @c page

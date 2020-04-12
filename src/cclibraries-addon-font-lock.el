@@ -1,4 +1,4 @@
-;;; mmux-emacs-cclibraries-addon-font-lock.el --- custom font locking for C language mode
+;;; cclibraries-font-lock.el --- custom font locking for C language mode
 
 ;;Copyright (C) 2020 Marco Maggi <mrc.mgg@gmail.com>
 
@@ -25,7 +25,7 @@
 
 ;;This file should be loaded with:
 ;;
-;;  (require 'mmux-emacs-cclibraries-addon-font-lock)
+;;  (require 'cclibraries-font-lock)
 ;;
 ;;upon loading: the font-locking for Emacs Lisp mode is configured at the top-level.
 
@@ -34,7 +34,7 @@
 ;;; Code:
 
 (eval-when-compile
-  (require 'mmux-emacs-cclibraries-addon-lists-of-symbols))
+  (require 'cclibraries-addon-lists-of-symbols))
 (require 'cc-mode)
 
 
@@ -186,52 +186,52 @@
 
 ;;;; font lock face definitions
 
-(defface mmux-emacs-cclibraries-addon-c-language-known-functions-face
+(defface cclibraries-c-language-known-functions-face
   `((t (:foreground "LightSteelBlue")))
   "CCMode custom face used for custom functions in the CCLibraries projects."
   :group 'custom-faces)
 
-(defconst mmux-emacs-cclibraries-addon-c-language-known-functions-face
-  'mmux-emacs-cclibraries-addon-c-language-known-functions-face
+(defconst cclibraries-c-language-known-functions-face
+  'cclibraries-c-language-known-functions-face
   "CCMode custom face used for custom functions in the CCLibraries projects.")
 
 
 ;;;; regular expressions
 
-;; (defconst mmux-emacs-cclibraries-addon-c-language-known-types-rex
+;; (defconst cclibraries-c-language-known-types-rex
 ;;   (eval-when-compile
 ;;     (regexp-opt
 ;;      '()
 ;;      'symbols))
 ;;   "List of known C language type names that will be highlighted with `font-lock-type-face'.")
 
-(defconst mmux-emacs-cclibraries-addon-c-language-known-functions-rex
+(defconst cclibraries-c-language-known-functions-rex
   (eval-when-compile
     (regexp-opt
-     (append mmux-emacs-cclibraries-addon-c-language-ccexceptions-known-functions-list
-	     mmux-emacs-cclibraries-addon-c-language-cctests-known-functions-list
-	     mmux-emacs-cclibraries-addon-c-language-ccmemory-known-functions-list
-	     mmux-emacs-cclibraries-addon-c-language-ccstructs-known-functions-list
-	     mmux-emacs-cclibraries-addon-c-language-ccstrings-known-functions-list
-	     mmux-emacs-cclibraries-addon-c-language-ccsys-known-functions-list)
+     (append cclibraries-c-language-ccexceptions-known-functions-list
+	     cclibraries-c-language-cctests-known-functions-list
+	     cclibraries-c-language-ccmemory-known-functions-list
+	     cclibraries-c-language-ccstructs-known-functions-list
+	     cclibraries-c-language-ccstrings-known-functions-list
+	     cclibraries-c-language-ccsys-known-functions-list)
      'symbols))
-  "List of known C language function names that will be highlighted with `mmux-emacs-cclibraries-addon-c-language-known-functions-face'.")
+  "List of known C language function names that will be highlighted with `cclibraries-c-language-known-functions-face'.")
 
-(defconst mmux-emacs-cclibraries-addon-c-language-known-directives-rex
+(defconst cclibraries-c-language-known-directives-rex
   (eval-when-compile
     (regexp-opt
-     (append mmux-emacs-cclibraries-addon-c-language-ccexceptions-directives-list
-	     mmux-emacs-cclibraries-addon-c-language-ccstructs-directives-list
-	     mmux-emacs-cclibraries-addon-c-language-cctests-directives-list
-	     mmux-emacs-cclibraries-addon-c-language-cdecls-directives-list
-	     mmux-emacs-cclibraries-addon-c-language-cast-directives-list
-	     mmux-emacs-cclibraries-addon-c-language-attributes-directives-list)
+     (append cclibraries-c-language-ccexceptions-directives-list
+	     cclibraries-c-language-ccstructs-directives-list
+	     cclibraries-c-language-cctests-directives-list
+	     cclibraries-c-language-cdecls-directives-list
+	     cclibraries-c-language-cast-directives-list
+	     cclibraries-c-language-attributes-directives-list)
      'symbols))
   "List of known C language directive names that will be highlighted with `font-lock-keyword-face'.")
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccnames-macros-rex
+(defconst cclibraries-c-language-ccnames-macros-rex
   (eval-when-compile
-    (regexp-opt mmux-emacs-cclibraries-addon-c-language-ccnames-macros-list 'symbols)))
+    (regexp-opt cclibraries-c-language-ccnames-macros-list 'symbols)))
 
 
 ;;;; main hook
@@ -254,17 +254,17 @@
   ;;symbol.
   ;;
   `(
-    ;;(,mmux-emacs-cclibraries-addon-c-language-known-types-rex 1 font-lock-type-face keep)
-    (,mmux-emacs-cclibraries-addon-c-language-known-functions-rex 1 mmux-emacs-cclibraries-addon-c-language-known-functions-face keep)
+    ;;(,cclibraries-c-language-known-types-rex 1 font-lock-type-face keep)
+    (,cclibraries-c-language-known-functions-rex 1 cclibraries-c-language-known-functions-face keep)
 
     ;;Abuse the keyword face to fontify some directives names.
     ;;
-    (,mmux-emacs-cclibraries-addon-c-language-known-directives-rex 1 font-lock-keyword-face keep)
+    (,cclibraries-c-language-known-directives-rex 1 font-lock-keyword-face keep)
 
     ;;Abuse the  keyword face to  fontify some CCNames macro  names.  We
     ;;use  t  as  OVERRIDE  argument to  override  an  already  existent
     ;;fontification with this specification.
-    (,mmux-emacs-cclibraries-addon-c-language-ccnames-macros-rex 1 font-lock-keyword-face t)
+    (,cclibraries-c-language-ccnames-macros-rex 1 font-lock-keyword-face t)
 
     ;; --------------------------------------------------------------------
 
@@ -370,6 +370,6 @@
 
 ;;;; done
 
-(provide 'mmux-emacs-cclibraries-addon-font-lock)
+(provide 'cclibraries-addon-font-lock)
 
-;;; mmux-emacs-cclibraries-addon-font-lock.el ends here
+;;; cclibraries-addon-font-lock.el ends here

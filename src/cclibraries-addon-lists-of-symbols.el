@@ -1,10 +1,10 @@
-;; mmux-emacs-cclibraries-addon-lists-of-symbols.el --- definition of lists of symbols for the C language
+;; cclibraries-addon-lists-of-symbols.el --- definition of lists of symbols for the C language
 
 ;; Copyright (C) 2020 Marco Maggi
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-11 20:26:00 marco>
+;; Time-stamp: <2020-04-12 06:16:49 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -33,15 +33,15 @@
 
 ;;;; list of identifiers: preprocessor symbols
 
-(defconst mmux-emacs-cclibraries-addon-c-language-cdecls-directives-list
+(defconst cclibraries-c-language-cdecls-directives-list
   '("cclib_decl"
     "cclib_private_decl"))
 
-(defconst mmux-emacs-cclibraries-addon-c-language-cast-directives-list
+(defconst cclibraries-c-language-cast-directives-list
   '("CCLIB_PC"
     "CCLIB_CAST"))
 
-(defconst mmux-emacs-cclibraries-addon-c-language-attributes-directives-list
+(defconst cclibraries-c-language-attributes-directives-list
   '("CCLIB_FUNC_ATTRIBUTE_ALWAYS_INLINE"
     "CCLIB_FUNC_ATTRIBUTE_CONST"
     "CCLIB_FUNC_ATTRIBUTE_CONSTRUCTOR"
@@ -62,7 +62,7 @@
 
 ;;;; CCMode font locking: CCExceptions stuff
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccexceptions-directives-list
+(defconst cclibraries-c-language-ccexceptions-directives-list
   '("cce_location"
     "cce_raise"
     "cce_run_body_handlers"
@@ -81,7 +81,7 @@
     "cce_descriptor"
     "cce_location"))
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccexceptions-known-functions-list
+(defconst cclibraries-c-language-ccexceptions-known-functions-list
   '("cce_sys_malloc"
     "cce_sys_realloc"
     "cce_sys_calloc"
@@ -173,14 +173,14 @@
 
 ;;;; CCMode font locking: CCTests stuff
 
-(defconst mmux-emacs-cclibraries-addon-c-language-cctests-directives-list
+(defconst cclibraries-c-language-cctests-directives-list
   '("cctests_init"
     "cctests_final"
     "cctests_begin_group"
     "cctests_end_group"
     "cctests_run"))
 
-(defconst mmux-emacs-cclibraries-addon-c-language-cctests-known-functions-list
+(defconst cclibraries-c-language-cctests-known-functions-list
   '("cctests_condition_init_base"
     "cctests_condition_is_base"
     ;;
@@ -391,7 +391,7 @@
 
 ;;;; CCMode font locking: CCMemory stuff
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccmemory-known-functions-list
+(defconst cclibraries-c-language-ccmemory-known-functions-list
   '("ccmem_malloc"
     "ccmem_realloc"
     "ccmem_calloc"
@@ -454,10 +454,10 @@
 
 ;;;; CCMode font locking: CCStructs stuff
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccstructs-directives-list
+(defconst cclibraries-c-language-ccstructs-directives-list
   '("ccstructs_core"))
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccstructs-known-functions-list
+(defconst cclibraries-c-language-ccstructs-known-functions-list
   '("ccstructs_dtor_self"
     "ccstructs_dtor_destroy"
     "ccstructs_init_and_register_handler"
@@ -481,7 +481,7 @@
     "ccstructs_pathname_is_normalised"
     "ccstructs_pathname_is_realpath"))
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccnames-macros-list
+(defconst cclibraries-c-language-ccnames-macros-list
   '(
     "cclib_init"
     "cclib_final"
@@ -518,7 +518,7 @@
 
 ;;;; CCMode font locking: CCStrings stuff
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccstrings-known-functions-list
+(defconst cclibraries-c-language-ccstrings-known-functions-list
   '("ccstr_library_init"
     ;; buffers
     "ccstr_init_and_register_final_buffer_handler"
@@ -544,11 +544,11 @@
 
 ;;;; CCMode font locking: CCSys stuff
 
-(defconst mmux-emacs-cclibraries-addon-c-language-ccsys-known-functions-list
+(defconst cclibraries-c-language-ccsys-known-functions-list
   '("ccsys_library_init"))
 
 
 ;;;; done
 
-(provide 'mmux-emacs-cclibraries-addon-lists-of-symbols)
-;;; mmux-emacs-cclibraries-addon-lists-of-symbols.el ends here
+(provide 'cclibraries-addon-lists-of-symbols)
+;;; cclibraries-addon-lists-of-symbols.el ends here
