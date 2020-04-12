@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-12 06:55:44 marco>
+;; Time-stamp: <2020-04-12 10:43:15 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -72,8 +72,7 @@
     ;;
     "CCLIB_DEFINE_STRUCT_WITH_DESCRIPTOR"
     "CCLIB_DEFINE_TRAIT"
-    "CCLIB_DEFINE_TRAIT_STRUCTURE"
-    "CCLIB_DEFINE_TRAIT_MAKER"
+    "CCLIB_DEFINE_TRAIT_IMPLEMENTATION"
     ;;
     "cclib_struct_descriptor_type"
     "cclib_struct_descriptor"
@@ -86,6 +85,7 @@
     "cclib_method_pointer"
     "cclib_call"
     "cclib_vcall"
+    "cclib_resource_pointer"
     ;;
     "cclib_trait_resource_pointer"
     ;;
