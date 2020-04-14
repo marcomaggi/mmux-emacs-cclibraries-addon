@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-13 12:37:25 marco>
+;; Time-stamp: <2020-04-14 07:17:47 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -89,8 +89,9 @@
     ;;
     "cclib_trait_resource_pointer"
     ;;
-    "cclib_handler_type"
-    "cclib_init_and_register_handler"
+    "cclib_exception_handler_type"
+    "cclib_exception_handler_function"
+    "cclib_exception_handler_init_and_register"
     ;;
     "cclib_fun"
     "cclib_is"
