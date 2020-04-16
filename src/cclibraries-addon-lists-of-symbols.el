@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-16 06:42:00 marco>
+;; Time-stamp: <2020-04-16 08:13:33 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -99,7 +99,6 @@
     "cclib_exceptional_condition_descriptor_pointer"
     "cclib_exceptional_condition_descriptor_set_parent_to"
     "cclib_exceptional_condition_object_type"
-    "cclib_exceptional_condition_object"
     "cclib_exceptional_condition_object_is"
     ;;
     "cclib_fun"
