@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-16 08:13:33 marco>
+;; Time-stamp: <2020-04-17 07:04:10 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -69,17 +69,16 @@
     "cclib_delete"
     "cclib_make"
     "cclib_unmake"
+    "cclib_fun"
+    "cclib_is"
     ;;
     "CCLIB_STRUCT_TYPEDEF"
     "CCLIB_DEFINE_STRUCT_WITH_DESCRIPTOR"
     "CCLIB_DEFINE_TRAIT"
     "CCLIB_DEFINE_TRAIT_IMPLEMENTATION"
     ;;
-    "cclib_struct_descriptor_type"
     "cclib_struct_descriptor"
-    "cclib_methods_table_type"
     "cclib_methods_table"
-    "cclib_method_type"
     "cclib_method"
     "cclib_struct_descriptor_ref_methods_table_pointer"
     "cclib_struct_descriptor_set_methods_table_pointer"
@@ -90,19 +89,22 @@
     ;;
     "cclib_trait_resource_pointer"
     ;;
-    "cclib_exception_handler_type"
     "cclib_exception_handler_function"
     "cclib_exception_handler_init_and_register"
     ;;
-    "cclib_exceptional_condition_descriptor_type"
     "cclib_exceptional_condition_descriptor"
     "cclib_exceptional_condition_descriptor_pointer"
     "cclib_exceptional_condition_descriptor_set_parent_to"
-    "cclib_exceptional_condition_object_type"
     "cclib_exceptional_condition_object_is"
-    ;;
-    "cclib_fun"
-    "cclib_is"
+    ))
+
+(defconst cclibraries-c-language-ccnames-type-macros-list
+  '("cclib_struct_descriptor_type"
+    "cclib_methods_table_type"
+    "cclib_method_type"
+    "cclib_exception_handler_type"
+    "cclib_exceptional_condition_descriptor_type"
+    "cclib_exceptional_condition_object_type"
     ))
 
 

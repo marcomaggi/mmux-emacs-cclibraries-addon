@@ -233,6 +233,10 @@
   (eval-when-compile
     (regexp-opt cclibraries-c-language-ccnames-macros-list 'symbols)))
 
+(defconst cclibraries-c-language-ccnames-type-macros-rex
+  (eval-when-compile
+    (regexp-opt cclibraries-c-language-ccnames-type-macros-list 'symbols)))
+
 
 ;;;; main hook
 
@@ -261,10 +265,13 @@
     ;;
     (,cclibraries-c-language-known-directives-rex 1 font-lock-keyword-face keep)
 
-    ;;Abuse the  keyword face to  fontify some CCNames macro  names.  We
-    ;;use  t  as  OVERRIDE  argument to  override  an  already  existent
-    ;;fontification with this specification.
+    ;;Abuse the keyword face to fontify some CCNames  macro names.  We use t as OVERRIDE argument to
+    ;;override an already existent fontification with this specification.
     (,cclibraries-c-language-ccnames-macros-rex 1 font-lock-keyword-face t)
+
+    ;;Abuse the  type face to fontify  some CCNames macro names.   We use t as  OVERRIDE argument to
+    ;;override an already existent fontification with this specification.
+    (,cclibraries-c-language-ccnames-type-macros-rex 1 font-lock-type-face t)
 
     ;; --------------------------------------------------------------------
 
