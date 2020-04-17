@@ -195,6 +195,17 @@
   'cclibraries-c-language-known-functions-face
   "CCMode custom face used for custom functions in the CCLibraries projects.")
 
+;;; --------------------------------------------------------------------
+
+(defface cclibraries-ccnames-macros-face
+  `((t (:foreground "SkyBlue")))
+  "CCMode custom face used for `cclib_' name-generating preprocessor macros in the CCLibraries projects."
+  :group 'custom-faces)
+
+(defconst cclibraries-ccnames-macros-face
+  'cclibraries-ccnames-macros-face
+  "CCMode custom face used for `cclib_' name-generating preprocessor macros in the CCLibraries projects.")
+
 
 ;;;; regular expressions
 
@@ -267,7 +278,7 @@
 
     ;;Abuse the keyword face to fontify some CCNames  macro names.  We use t as OVERRIDE argument to
     ;;override an already existent fontification with this specification.
-    (,cclibraries-c-language-ccnames-macros-rex 1 font-lock-keyword-face t)
+    (,cclibraries-c-language-ccnames-macros-rex 1 cclibraries-ccnames-macros-face t)
 
     ;;Abuse the  type face to fontify  some CCNames macro names.   We use t as  OVERRIDE argument to
     ;;override an already existent fontification with this specification.
