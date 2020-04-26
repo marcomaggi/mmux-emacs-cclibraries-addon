@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020a
-;; Time-stamp: <2020-04-17 07:04:10 marco>
+;; Time-stamp: <2020-04-26 07:38:51 marco>
 ;; Keywords: convenience, data, languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -33,15 +33,15 @@
 
 ;;;; CCMode font locking: CCLibraries stuff
 
-(defconst cclibraries-c-language-cdecls-directives-list
+(defconst cclibraries-cdecls-directives-list
   '("cclib_decl"
     "cclib_private_decl"))
 
-(defconst cclibraries-c-language-cast-directives-list
+(defconst cclibraries-cast-directives-list
   '("CCLIB_PC"
     "CCLIB_CAST"))
 
-(defconst cclibraries-c-language-attributes-directives-list
+(defconst cclibraries-attributes-directives-list
   '("CCLIB_FUNC_ATTRIBUTE_ALWAYS_INLINE"
     "CCLIB_FUNC_ATTRIBUTE_CONST"
     "CCLIB_FUNC_ATTRIBUTE_CONSTRUCTOR"
@@ -59,7 +59,7 @@
     "CCLIB_FUNC_ATTRIBUTE_VISIBILITY"
     "CCLIB_UNUSED"))
 
-(defconst cclibraries-c-language-ccnames-macros-list
+(defconst cclibraries-ccnames-macros-list
   '(
     "cclib_init"
     "cclib_final"
@@ -98,7 +98,7 @@
     "cclib_exceptional_condition_object_is"
     ))
 
-(defconst cclibraries-c-language-ccnames-type-macros-list
+(defconst cclibraries-ccnames-type-macros-list
   '("cclib_struct_descriptor_type"
     "cclib_methods_table_type"
     "cclib_method_type"
@@ -110,7 +110,7 @@
 
 ;;;; CCMode font locking: CCExceptions stuff
 
-(defconst cclibraries-c-language-ccexceptions-directives-list
+(defconst cclibraries-ccexceptions-directives-list
   '("cce_location"
     "cce_raise"
     "cce_run_body_handlers"
@@ -129,7 +129,7 @@
     "cce_descriptor"
     "cce_location"))
 
-(defconst cclibraries-c-language-ccexceptions-known-functions-list
+(defconst cclibraries-ccexceptions-known-functions-list
   '("cce_sys_malloc"
     "cce_sys_realloc"
     "cce_sys_calloc"
@@ -221,14 +221,14 @@
 
 ;;;; CCMode font locking: CCTests stuff
 
-(defconst cclibraries-c-language-cctests-directives-list
+(defconst cclibraries-cctests-directives-list
   '("cctests_init"
     "cctests_final"
     "cctests_begin_group"
     "cctests_end_group"
     "cctests_run"))
 
-(defconst cclibraries-c-language-cctests-known-functions-list
+(defconst cclibraries-cctests-known-functions-list
   '("cctests_condition_init_base"
     "cctests_condition_is_base"
     ;;
@@ -439,7 +439,7 @@
 
 ;;;; CCMode font locking: CCMemory stuff
 
-(defconst cclibraries-c-language-ccmemory-known-functions-list
+(defconst cclibraries-ccmemory-known-functions-list
   '("ccmem_malloc"
     "ccmem_realloc"
     "ccmem_calloc"
@@ -502,10 +502,10 @@
 
 ;;;; CCMode font locking: CCStructs stuff
 
-(defconst cclibraries-c-language-ccstructs-directives-list
+(defconst cclibraries-ccstructs-directives-list
   '("ccstructs_core"))
 
-(defconst cclibraries-c-language-ccstructs-known-functions-list
+(defconst cclibraries-ccstructs-known-functions-list
   '("ccstructs_dtor_self"
     "ccstructs_dtor_destroy"
     "ccstructs_init_and_register_handler"
@@ -532,7 +532,7 @@
 
 ;;;; CCMode font locking: CCStrings stuff
 
-(defconst cclibraries-c-language-ccstrings-known-functions-list
+(defconst cclibraries-ccstrings-known-functions-list
   '("ccstr_library_init"
     ;; buffers
     "ccstr_init_and_register_final_buffer_handler"
@@ -558,7 +558,7 @@
 
 ;;;; CCMode font locking: CCSys stuff
 
-(defconst cclibraries-c-language-ccsys-known-functions-list
+(defconst cclibraries-ccsys-known-functions-list
   '("ccsys_library_init"))
 
 

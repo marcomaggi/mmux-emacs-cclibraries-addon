@@ -4,7 +4,7 @@
 
 ;; Author: Marco Maggi <mrc.mgg@gmail.com>
 ;; Created: Mar 22, 2020
-;; Time-stamp: <2020-04-12 06:17:10 marco>
+;; Time-stamp: <2020-04-26 07:38:42 marco>
 ;; Keywords: languages
 
 ;; This file is part of MMUX Emacs CCLibraries Addon.
@@ -36,7 +36,7 @@
 
 ;;;; Templates insertion
 
-(defun cclibraries-c-language-insert-cce-condition (PREFIX NAME STATIC_DESCRIPTION)
+(defun cclibraries-insert-cce-condition (PREFIX NAME STATIC_DESCRIPTION)
   "Insert the template of a CCExceptions definition.
 
 Argument PREFIX a string representing the prefix of this API.

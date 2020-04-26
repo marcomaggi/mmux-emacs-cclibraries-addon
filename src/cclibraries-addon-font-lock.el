@@ -186,13 +186,13 @@
 
 ;;;; font lock face definitions
 
-(defface cclibraries-c-language-known-functions-face
+(defface cclibraries-known-functions-face
   `((t (:foreground "LightSteelBlue")))
   "CCMode custom face used for custom functions in the CCLibraries projects."
   :group 'custom-faces)
 
-(defconst cclibraries-c-language-known-functions-face
-  'cclibraries-c-language-known-functions-face
+(defconst cclibraries-known-functions-face
+  'cclibraries-known-functions-face
   "CCMode custom face used for custom functions in the CCLibraries projects.")
 
 ;;; --------------------------------------------------------------------
@@ -209,44 +209,44 @@
 
 ;;;; regular expressions
 
-;; (defconst cclibraries-c-language-known-types-rex
+;; (defconst cclibraries-known-types-rex
 ;;   (eval-when-compile
 ;;     (regexp-opt
 ;;      '()
 ;;      'symbols))
 ;;   "List of known C language type names that will be highlighted with `font-lock-type-face'.")
 
-(defconst cclibraries-c-language-known-functions-rex
+(defconst cclibraries-known-functions-rex
   (eval-when-compile
     (regexp-opt
-     (append cclibraries-c-language-ccexceptions-known-functions-list
-	     cclibraries-c-language-cctests-known-functions-list
-	     cclibraries-c-language-ccmemory-known-functions-list
-	     cclibraries-c-language-ccstructs-known-functions-list
-	     cclibraries-c-language-ccstrings-known-functions-list
-	     cclibraries-c-language-ccsys-known-functions-list)
+     (append cclibraries-ccexceptions-known-functions-list
+	     cclibraries-cctests-known-functions-list
+	     cclibraries-ccmemory-known-functions-list
+	     cclibraries-ccstructs-known-functions-list
+	     cclibraries-ccstrings-known-functions-list
+	     cclibraries-ccsys-known-functions-list)
      'symbols))
-  "List of known C language function names that will be highlighted with `cclibraries-c-language-known-functions-face'.")
+  "List of known C language function names that will be highlighted with `cclibraries-known-functions-face'.")
 
-(defconst cclibraries-c-language-known-directives-rex
+(defconst cclibraries-known-directives-rex
   (eval-when-compile
     (regexp-opt
-     (append cclibraries-c-language-ccexceptions-directives-list
-	     cclibraries-c-language-ccstructs-directives-list
-	     cclibraries-c-language-cctests-directives-list
-	     cclibraries-c-language-cdecls-directives-list
-	     cclibraries-c-language-cast-directives-list
-	     cclibraries-c-language-attributes-directives-list)
+     (append cclibraries-ccexceptions-directives-list
+	     cclibraries-ccstructs-directives-list
+	     cclibraries-cctests-directives-list
+	     cclibraries-cdecls-directives-list
+	     cclibraries-cast-directives-list
+	     cclibraries-attributes-directives-list)
      'symbols))
   "List of known C language directive names that will be highlighted with `font-lock-keyword-face'.")
 
-(defconst cclibraries-c-language-ccnames-macros-rex
+(defconst cclibraries-ccnames-macros-rex
   (eval-when-compile
-    (regexp-opt cclibraries-c-language-ccnames-macros-list 'symbols)))
+    (regexp-opt cclibraries-ccnames-macros-list 'symbols)))
 
-(defconst cclibraries-c-language-ccnames-type-macros-rex
+(defconst cclibraries-ccnames-type-macros-rex
   (eval-when-compile
-    (regexp-opt cclibraries-c-language-ccnames-type-macros-list 'symbols)))
+    (regexp-opt cclibraries-ccnames-type-macros-list 'symbols)))
 
 
 ;;;; main hook
@@ -269,20 +269,20 @@
   ;;symbol.
   ;;
   `(
-    ;;(,cclibraries-c-language-known-types-rex 1 font-lock-type-face keep)
-    (,cclibraries-c-language-known-functions-rex 1 cclibraries-c-language-known-functions-face keep)
+    ;;(,cclibraries-known-types-rex 1 font-lock-type-face keep)
+    (,cclibraries-known-functions-rex 1 cclibraries-known-functions-face keep)
 
     ;;Abuse the keyword face to fontify some directives names.
     ;;
-    (,cclibraries-c-language-known-directives-rex 1 font-lock-keyword-face keep)
+    (,cclibraries-known-directives-rex 1 font-lock-keyword-face keep)
 
     ;;Abuse the keyword face to fontify some CCNames  macro names.  We use t as OVERRIDE argument to
     ;;override an already existent fontification with this specification.
-    (,cclibraries-c-language-ccnames-macros-rex 1 cclibraries-ccnames-macros-face t)
+    (,cclibraries-ccnames-macros-rex 1 cclibraries-ccnames-macros-face t)
 
     ;;Abuse the  type face to fontify  some CCNames macro names.   We use t as  OVERRIDE argument to
     ;;override an already existent fontification with this specification.
-    (,cclibraries-c-language-ccnames-type-macros-rex 1 font-lock-type-face t)
+    (,cclibraries-ccnames-type-macros-rex 1 font-lock-type-face t)
 
     ;; --------------------------------------------------------------------
 
